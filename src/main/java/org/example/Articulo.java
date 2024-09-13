@@ -1,12 +1,17 @@
 package org.example;
 
+import lombok.*;
+import org.hibernate.envers.Audited;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+
 @Entity
 @Table(name = "articulos")
+@Audited
 public class Articulo implements Serializable {
 
     private static final long serialVersionUID = 1L;

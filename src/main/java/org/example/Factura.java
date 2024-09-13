@@ -1,5 +1,8 @@
 package org.example;
 
+import lombok.*;
+import org.hibernate.envers.Audited;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -7,6 +10,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "factura")
+@Audited
 public class Factura implements Serializable {
 
     private static final long serialVersionUID = 1L;

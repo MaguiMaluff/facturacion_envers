@@ -9,6 +9,7 @@ public class Main {
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("example-unit");
 
         EntityManager entityManager = entityManagerFactory.createEntityManager();
+//
 
         try {
             entityManager.getTransaction().begin();
@@ -66,6 +67,11 @@ public class Main {
             f1.setTotal(70);
 
             entityManager.persist(f1);
+
+            //Factura factura = entityManager.find(Factura.class, 1L);
+            //factura.setNumero(85);
+
+            //entityManager.merge(factura);
 
             entityManager.flush();
 
